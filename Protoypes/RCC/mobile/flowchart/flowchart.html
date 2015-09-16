@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>RainCityCounselling</title>
+<head>
+	<link rel="stylesheet" type="text/css" href="../../../General.css">
+
+	<script type="text/javascript" src="../../../01-lightbox/lib/jquery-1.10.1.min.js"></script>
+
+	<!-- Add mousewheel plugin -->
+	<script type="text/javascript" src="../../../01-lightbox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="../../../01-lightbox/source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="../../../01-lightbox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+	<!-- Add Button helper -->
+	<link rel="stylesheet" type="text/css" href="../../../01-lightbox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+	<script type="text/javascript" src="../../../01-lightbox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			 *  Simple image gallery. Uses default settings
+			 */
+
+			$('.fancybox').fancybox();
+
+			/*
+			 *  Different effects
+			 */
+
+			// Change title type, overlay closing speed
+			$(".fancybox-effects-a").fancybox({
+				helpers: {
+					title : {
+						type : 'outside'
+					},
+					overlay : {
+						speedOut : 0
+					}
+				}
+			});
+
+			// Disable opening and closing animations, change title type
+			$(".fancybox-effects-b").fancybox({
+				openEffect  : 'none',
+				closeEffect	: 'none',
+
+				helpers : {
+					title : {
+						type : 'over'
+					}
+				}
+			});
+
+			// Set custom style, close if clicked, change title type and overlay color
+			$(".fancybox-effects-c").fancybox({
+				wrapCSS    : 'fancybox-custom',
+				closeClick : true,
+
+				openEffect : 'none',
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					overlay : {
+						css : {
+							'background' : 'rgba(238,238,238,0.85)'
+						}
+					}
+				}
+			});
+
+			// Remove padding, set opening and closing animations, close if clicked and disable overlay
+			$(".fancybox-effects-d").fancybox({
+				padding: 0,
+
+				openEffect : 'elastic',
+				openSpeed  : 150,
+
+				closeEffect : 'elastic',
+				closeSpeed  : 150,
+
+				closeClick : true,
+
+				helpers : {
+					overlay : null
+				}
+			});
+
+			/*
+			 *  Button helper. Disable animations, hide close button, change title type and content
+			 */
+
+			$('.fancybox-buttons').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+			});
+
+			/*
+			 *  Open manually
+			 */
+
+			$("#fancybox-manual-a").click(function() {
+				$.fancybox.open('1_b.jpg');
+			});
+
+			$("#fancybox-manual-b").click(function() {
+				$.fancybox.open({
+					href : 'iframe.html',
+					type : 'iframe',
+					padding : 5
+				});
+			});
+
+
+		});
+	</script>
+</head>
+
+<body>
+<!-- Header Start -->
+<div id="Header">
+    <div class="RainCityCounselling">
+        <img src="images/RainCityCounsellingLogo.jpg" />
+        <br>
+    </div>
+<!-- Header End -->
+
+<!-- Flowcharts Start -->
+<div id="Flowchart">
+        <h3>Landing Page</h3>
+        <div class="MobileThumbs">
+        	<ul>
+            	<li><a class="fancybox-buttons" data-fancybox-group="button" href="../00-images/00-Landing.png" title="Landing Screen" style="background-image: url(BG.180x324.png)"><img src="../00-images/00-Landing.png" /></a><span class="PageName">Landing Screen</span></li>
+            	<li><a class="fancybox-buttons" data-fancybox-group="button" href="../00-images/00-Landing-Search.png" title="Search" style="background-image: url(BG.180x324.png)"><img src="../00-images/00-Landing-Search.png" /></a><span class="PageName">Search</span></li>
+            	<!--<li><a class="fancybox-buttons" data-fancybox-group="button" href="../00-images/00-Landing-IamLocatedIn.png" title="I am located in" style="background-image: url(BG.180x324.png)"><img src="../00-images/00-Landing-IamLocatedIn.png" /></a><span class="PageName">I am located in</span></li>-->
+            	<!--<li><a class="fancybox-buttons" data-fancybox-group="button" href="../00-images/00-Landing-INeedHelpWith.png" title="I need help with" style="background-image: url(BG.180x324.png)"><img src="../00-images/00-Landing-INeedHelpWith.png" /></a><span class="PageName">I need help with</span></li>-->
+            	<li><a class="fancybox-buttons" data-fancybox-group="button" href="../00-images/00-Landing-Scroll.png" title="Scroll" style="background-image: url(BG.180x324.png)"><img src="../00-images/00-Landing-Scroll.png" /></a><span class="PageName">Scroll</span></li>
+        	</ul>
+        </div>
+        
+        <div class="ListStyleClear">&nbsp;</div>
+
+        <h3>Menu</h3>
+        <div class="MobileThumbs">
+        	<ul>
+                <li><a class="fancybox-buttons" data-fancybox-group="button" href="../00-images/03-Menu.png" title="Menu" style="background-image: url(BG.180x324.png)"><img src="../00-images/03-Menu.png" /></a><span class="PageName">Menu</span></li>
+            </ul>
+        </div>
+
+        <div class="ListStyleClear">&nbsp;</div>
+
+        <h3>Directory</h3>
+        <div class="MobileThumbs">
+        	<ul>
+                <li><a class="fancybox-buttons" data-fancybox-group="button" href="../00-images/01-Directory.png" title="Directory" style="background-image: url(BG.180x324.png)"><img src="../00-images/01-Directory.png" /></a><span class="PageName">Directory</span></li>
+                <li><a class="fancybox-buttons" data-fancybox-group="button" href="../00-images/01-Directory-Refine-Blank.png" title="Directory Blank" style="background-image: url(BG.180x324.png)"><img src="../00-images/01-Directory-Refine-Blank.png" /></a><span class="PageName">Directory Blank</span></li>
+                <li><a class="fancybox-buttons" data-fancybox-group="button" href="../00-images/01-Directory-Refine-Dropdown.png" title="Directory Dropdown" style="background-image: url(BG.180x324.png)"><img src="../00-images/01-Directory-Refine-Dropdown.png" /></a><span class="PageName">Directory Dropdown</span></li>
+                <li><a class="fancybox-buttons" data-fancybox-group="button" href="../00-images/01-Directory-Refine.png" title="Directory Refine" style="background-image: url(BG.180x324.png)"><img src="../00-images/01-Directory-Refine.png" /></a><span class="PageName">Directory Refine</span></li>
+            </ul>
+        </div>
+
+        <div class="ListStyleClear">&nbsp;</div>
+
+        <h3>Profile</h3>
+        <div class="MobileThumbs">
+             <ul>
+                <li><a class="fancybox-buttons" data-fancybox-group="button" href="../00-images/02-Profile.png" title="Profile"><img src="../00-images/02-Profile.png" /></a><span class="PageName">Profile</span></li>
+            </ul>
+        </div>
+            
+            <div class="ListStyleClear">&nbsp;</div>
+<!-- Flowcharts End -->
+</div>
+</body>
+</html>
